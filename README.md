@@ -10,3 +10,4 @@ Bot Sample
 2개의 python file 그리고 다운로드가 끝난 파일이 있어야한다
 
 to.py에는 디스코드 봇의 토큰을 적고
+comcombot.py 을 돌리면 된다.
