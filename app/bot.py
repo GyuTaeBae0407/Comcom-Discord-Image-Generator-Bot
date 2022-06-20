@@ -69,9 +69,13 @@ async def get_task_status(
                 embed.set_image(url=image_url)
                 await ctx.respond(embed=embed)
             else:
-                await ctx.respond(f"Task({task_id}) : { result['status']}")
+                await ctx.respond(f"[INFO]: Task({task_id})'s status is {result['status']}")
         else:
-            pass
+            response_json = response.json()
+            if "error" in response_json:
+                await ctx.respond(f"[ERROR]: {response_json['error']['message']}")
+            else:
+                await ctx.respond(f"[ERROR]: Unknown ERROR")
     except Exception as error:
         logger.error(f"{error}")
         await ctx.respond(f"[ERROR]: {error}")
