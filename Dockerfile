@@ -1,7 +1,10 @@
 FROM python:3.8.6
 
-COPY . .
+WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY ./app/requirements.txt /app/requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
-CMD [ "python", "comcombot.py" ]
+COPY ./app /app
+
+CMD ["python", "-u", "bot.py"]
