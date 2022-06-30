@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 
-bot = interactions.Client(token="OTg2NTE3ODU5MTcxNzE3MTMx.GdSAhH.k4yqG0En0ljR882TnEVv_2oKHoPomFHi84qA9c")
+bot = interactions.Client(token="")
 
 #use 2 machine
 
